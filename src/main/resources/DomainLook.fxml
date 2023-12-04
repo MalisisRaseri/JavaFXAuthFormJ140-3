@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="150" prefWidth="450" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxauthformj1403.Looks.DomainLookController">
+    <children>
+        <TableView AnchorPane.topAnchor="15" AnchorPane.bottomAnchor="15" AnchorPane.leftAnchor="15" AnchorPane.rightAnchor="15" fx:id="domainTable" >
+            <columns>
+                <TableColumn text="Web Name" fx:id="webNameColumn" />
+                <TableColumn text="Domain Name" fx:id="domainNameColumn" />
+                <TableColumn text="IP" fx:id="ipColumn" />
+                <TableColumn text="Registration Date" fx:id="registrationDateColumn" />
+                <TableColumn text="Country" fx:id="countryColumn" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
