@@ -33,15 +33,17 @@ public class AppController implements Initializable {
 
     @FXML
     private void handleButtonAction(ActionEvent event) {
+       UserRepImpl userRep = new UserRepImpl();
+       PersonLook pl = new PersonLook();
         if (event.getSource().equals(buttonSignIn)) {
-            new UserRepImpl().getUsers().forEach(e -> {
+            userRep.getUsers().forEach(e -> {
                 if (textName.getText().equals(e.getName()) && textPassword.getText().equals(e.getPassword())) {
                     textLabel.setText("connected");
                     Node node = (Node) event.getSource();
                     Stage stage = (Stage) node.getScene().getWindow();
                     stage.hide();
                     try {
-                        new PersonLook().init();
+                        pl.init();
                     } catch (IOException ex) {
                         Logger.getLogger(AppController.class.getName()).log(Level.SEVERE, null, ex);
                     }
